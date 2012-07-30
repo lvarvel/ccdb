@@ -14,6 +14,7 @@ gem 'jruby-openssl'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'haml', '= 3.1.6'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyrhino'
@@ -23,11 +24,19 @@ end
 
 gem 'jquery-rails'
 
+group :test, :development do
+  gem 'rspec-rails', '= 2.11.0'
+  gem 'capybara-webkit', '= 0.12.1'
+  gem 'database_cleaner', '=0.8.0'
+  gem 'factory_girl', '= 3.5.0'
+  gem 'factory_girl_rails', '= 3.5.0'
+end
+
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
